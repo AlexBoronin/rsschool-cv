@@ -424,35 +424,36 @@ body {
     font-size: 16px;
     line-height: 1.2;
     font-weight: normal;
-    max-width: 1440px;
-    margin: 0 auto;
     color: #EDF2EC;
 }
 
-header {
+header,
+.welcome,
+.service,
+.contacts {
     background: #EDF2EC;
 }
 
-.wrap-content {
-    max-width: 1222px;
+.wrapper {
+    max-width: 1440px;
     margin: 0 auto;
 }
 
-.header-wrap {
+.header-container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    /*margin: 42px 109px 42px 111px;*/
 }
 
 .header-logo {
-    display: inline-flex;
-    margin-right: 688px;
+    display: flex;
+    justify-content: space-between;
+    margin: 52px 0 62px 111px;
 }
 
-.logo-link {
-    display: block;
-    margin: 56px auto 60px auto;
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .nav-list {
@@ -460,23 +461,28 @@ header {
     flex-wrap: wrap;
 }
 
+.header-nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav-list-item {
     margin-right: 46px;
 }
 
 .nav-list-item:last-child {
-    margin-right: 0;
+    margin-right: 109px;
 }
 
-.header-logo-link {
-    display: block;
-    text-decoration: none;
-    margin: 52px 1px 62px auto;
+.header-logo-pic {
+    width: 20px;
+    height: 20px;
 }
 
 .logo-link {
     font-family: 'Inika';
     font-weight: 400;
+    line-height: 21px;
     color: #000000;
     text-decoration: none;
 }
@@ -504,26 +510,20 @@ header {
     opacity: .60;
 }
 
-.welcome {
-    background-color: #EDF2EC;
-}
-
 .grow-plant {
     display: flex;
-    flex: auto;
-}
-
-.grow-plant img {
-    width: 448px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .grow-plant-image {
-    margin: 62px 0;
-    margin-left: 109px;
+    margin: 62px 225px 62px 109px;
+    max-width: 448px;
+    max-height: 407px;
 }
 
 .plant-prez {
-    margin: 98px 109px 94px 227px;
+    margin: 98px 109px 94px 0;
 }
 
 h1 {
@@ -548,54 +548,60 @@ h1 span {
     font-size: 20px;
     line-height: 35px;
     color: #636060;
+    width: 549px;
     margin-bottom: 48px;
 }
 
 .button-learn {
-    text-align: center;
+    width: 158px;
+    height: 44px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    padding: 14px;
     border: 2px solid #E06733;
-    width: 189px;
     border-radius: 10px;
     text-transform: uppercase;
     background-color: transparent;
-}
-
-.prof {
     display: flex;
-    flex: content-box;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
 }
 
 .we-are {
-    margin: 161px 0 155px 109px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.homeplant {
-    max-width: 464px;
-    margin: 93px 109px 93px 153px;
+.about {
+    background-color: #FFFFFF;
+}
+
+.we-are-block {
+    margin-left: 109px;
 }
 
 .prof-title {
+    max-width: 463px;
     font-family: 'Inika';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
+    margin-bottom: 40px;
+}
+
+.homeplant {
+    max-width: 464px;
+    margin: 93px 109px 94px 0;
 }
 
 .prof-title span {
     color: #E06733;
-}
-
-.we-are-block {
-    width: 463px;
-    margin-bottom: 40px;
 }
 
 .prof-text {
@@ -605,22 +611,21 @@ h1 span {
     font-size: 20px;
     line-height: 30px;
     color: #636060;
-}
-
-.service {
-    background: #EDF2EC;
+    max-width: 605px;
+    margin-right: 153px;
 }
 
 .service-project {
-    margin: 0 324px 90px 109px;
     padding-top: 40px;
+    display: flex;
+    padding-bottom: 90px;
 }
 
 .service-buttton {
     display: flex;
-    flex: content-box;
+    justify-content: space-between;
     align-items: center;
-
+    margin-left: 109px;
 }
 
 .service-title {
@@ -641,7 +646,7 @@ h1 span {
 
 .garden,
 .lawn {
-    margin-right: 38px;
+    margin-right: 56px;
 }
 
 button.garden,
@@ -660,18 +665,21 @@ button.planting {
 }
 
 .image-space {
-    text-align: center;
     margin-left: 109px;
-    max-width: 1222px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 121px;
+    justify-content: space-around;
+    padding-bottom: 58px;
 }
 
-.image-cpace-cart {
+.image-space-cart {
     border: 1px solid #E3E1D5;
     border-radius: 22px;
+}
+
+.image-space-cart p img {
+    max-width: 330px;
+    max-height: 350px;
 }
 
 .cart-link a {
@@ -682,6 +690,8 @@ button.planting {
     margin-bottom: 55px;
     cursor: pointer;
     border-radius: 20px;
+    display: inline-block;
+    margin-right: 107px;
 }
 
 .cart-link:hover {
@@ -689,10 +699,9 @@ button.planting {
     background-color: #EDF2EC;
     box-shadow: 10px 15px 10px rgba(97, 134, 76, 0.25);
     transition: .8s;
-
 }
 
-h4 {
+figcaption h4 {
     margin: 10px 0;
     font-family: 'Inter';
     font-style: normal;
@@ -700,6 +709,7 @@ h4 {
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
+    text-align: center;
 }
 
 figcaption p {
@@ -710,6 +720,7 @@ figcaption p {
     line-height: 20px;
     color: #717171;
     margin-bottom: 36px;
+    text-align: center;
 }
 
 .prices {
@@ -762,6 +773,10 @@ figcaption p {
     justify-content: space-between;
 }
 
+.price-form-button button:last-child {
+    margin-bottom: 0;
+}
+
 .contact_us {
     margin-left: 438px;
     display: flex;
@@ -798,28 +813,30 @@ figcaption p {
     border-radius: 5px;
     padding: 12px 0;
     margin-bottom: 39px;
+    background-color: transparent;
 }
 
-.contacts {
-    background: #EDF2EC;
+.contacts_block {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 109px;
 }
 
 .woman {
-    margin: 53px 0 0 109px;
+    max-width: 400px;
+    margin-top: 53px;
 }
 
-.contacts h2 {
-    margin: 60px 64px 439px 113px;
+.contacts_block h2 {
     font-family: 'Inika';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
+    margin-top: 60px;
+    margin-left: 113px;
 }
-
 
 .place {
     background: #D6E7D2;
@@ -832,9 +849,8 @@ figcaption p {
     letter-spacing: 0.05em;
     color: #717171;
     border: none;
-    margin: 149px 109px 0 0;
-    display: flex;
-    align-items: center;
+    margin: 149px 109px auto 64px;
+    text-align: center;
 }
 
 .place span {
@@ -905,20 +921,14 @@ figcaption p {
 }
 
 .garden:hover,
-/*.garden span:hover,*/
 .lawn:hover,
-/*.lawn span:hover,*/
-.planting:hover
-/*.planting span:hover */
-{
+.planting:hover {
     color: white;
     background: #b4de9c;
     border-color: #b4de9c;
     box-shadow: 10px 15px 10px rgba(42, 40, 40, 0.25);;
     transition: .8s;
 }
-
-
 
 .button-basic:hover,
 .button-standart:hover,
@@ -930,7 +940,7 @@ figcaption p {
 
 .button_us:hover {
     background: #E06733;
-    color: #afe592;
+    color: #ffffff;
     transition: .5s;
 }
 
